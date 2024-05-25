@@ -31,6 +31,8 @@ public class Main {
         FileOutputStream os = new FileOutputStream(outputPngFile);
         for (int i = 0; i < filenames.length; ++i) {
             os.write(array[i].getData());
+            array[i].countEven();
+            System.out.println(array[i].getEven() + "::" + array[i].getEvenOrOdd());
         }
         os.flush();
         os.close();
